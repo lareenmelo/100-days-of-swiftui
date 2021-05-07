@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var checkAmount = "" // SwiftUI uses string to store textfield values
-//    @State private var numberOfPeople = 2
+    @State private var checkAmount = ""
     // 3
     @State private var numberOfPeople = ""
     @State private var tipPercentage = 2
@@ -34,19 +33,9 @@ struct ContentView: View {
         let amountPerPerson = grandTotal / peopleCount
 
         return amountPerPerson
-//        let peopleCount = Double(numberOfPeople + 2)
-//        let tipSelection = Double(tipPercentages[tipPercentage])
-//        let orderAmount = Double(checkAmount) ?? 0
-//
-//        let tipValue = orderAmount / 100 * tipSelection
-//        let grandTotal = orderAmount + tipValue
-//        let amountPerPerson = grandTotal / peopleCount
-//
-//        return amountPerPerson
     }
     
     var body: some View {
-        // When an @State property changes SwiftUI will re-invoke the body property (i.e., reload our UI)
         NavigationView {
             Form {
                 Section {
@@ -55,12 +44,6 @@ struct ContentView: View {
                     // 3
                     TextField("Number of people", text: $numberOfPeople)
                         .keyboardType(.decimalPad)
-
-//                    Picker("Number of people", selection: $numberOfPeople) {
-//                        ForEach(2 ..< 100) {
-//                            Text("\($0) people")
-//                        }
-//                    }
                 }
                 
                 Section(header: Text("How much tip do you want to leave?")) {
