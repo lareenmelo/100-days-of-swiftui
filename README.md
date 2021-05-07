@@ -12,12 +12,16 @@
 * [Day 10](https://github.com/lareenmelo/100-days-of-swiftui/blob/main/D1-D15/D10.md)
 * [Day 11](https://github.com/lareenmelo/100-days-of-swiftui/blob/main/D1-D15/D11.md)
 * [Day 12](https://github.com/lareenmelo/100-days-of-swiftui/blob/main/D1-D15/D12.md)
-* [Day 13](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/D1-D15/D13-D15)
-* [Day 14](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/D1-D15/D13-D15)
-* [Day 15](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/D1-D15/D13-D15)
+* [Day 13 - Day 15](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/D1-D15/D13-D15)
+* [Day 16 - Day 18]()
+* [Day 19]()
+* [Day 20 - Day 22]()
+* [Day 23 - Day 24]()
+* [Day 25]()
+
 
 | Type | Status |
 |:--|--|
-| Projects |0/19 |
+| Projects |1/19 |
 |Milestone Projects|0/6|
 |Challenge Days| 1/1|
