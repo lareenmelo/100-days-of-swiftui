@@ -8,5 +8,5 @@ https://www.hackingwithswift.com/100/swiftui/19
 ## Topics
 
 |Day 19 :white_check_mark: | Screenshot |
-|:--|:--|:--|
+|:--|:--:|
 | Created a temperature converter app from scratch (reviewing what I had previously worked on :grimacing: face)| ![PrettyGirlTemperature](Screenshots/D19.png)|
