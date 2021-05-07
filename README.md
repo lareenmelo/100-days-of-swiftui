@@ -15,13 +15,13 @@
 * [Day 13 - Day 15](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/D1-D15/D13-D15)
 * [Day 16 - Day 18](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/PROJECT1)
 * [Day 19](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/CHALLENGE1)
-* [Day 20 - Day 22]()
+* [Day 20 - Day 22](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/PROJECT2)
 * [Day 23 - Day 24]()
 * [Day 25]()
 
 
 | Type | Status |
 |:--|--|
-| Projects |1/19 |
+| Projects |2/19 |
 |Milestone Projects|0/6|
 |Challenge Days| 1/1|
