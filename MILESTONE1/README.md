@@ -8,4 +8,4 @@ https://www.hackingwithswift.com/100/swiftui/25
 
 |Day 25 :white_check_mark: | Media |
 |:--|:--:|
-| | ![PrettyGirlTemperature](Screenshots/25.mov)|
+| | ![PrettyGirlTemperature](https://user-images.githubusercontent.com/12801333/117529758-68591580-afa7-11eb-8de1-9a78c9960619.mov)|
