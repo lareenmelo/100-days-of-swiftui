@@ -9,7 +9,7 @@ View, ViewModifier, Modifiers, and `some` operator
 |:--|:--|
 |Learned more about modifiers, containers, and SwiftUI’s performance.| Completed the challenges for the day (created custom views and modifiers!) |
 
-### [Notes]()
+### [Notes](https://github.com/lareenmelo/100-days-of-swiftui/blob/main/PROJECT3/D23.md)
 
 ## Challenges
 
@@ -20,4 +20,4 @@ From [Hacking with Swift](https://www.hackingwithswift.com/read/1/7/wrap-up):
 
 |challenge #1| challenge #2|challenge #3|
 |:--:|:--:|:--:|
-|![ViewsAndModifiers](Data/D24_1.png)|![WeSplit](Data/D24_2.png)|![GuessTheFlag](Data/D24_3.png)|
+|![ViewsAndModifiers](Data/D24_1.png)|![WeSplit](https://user-images.githubusercontent.com/12801333/117526211-9af81380-af91-11eb-91f9-7b583c29a719.mov)|![GuessTheFlag](Data/D24_3.png)|
