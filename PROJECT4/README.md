@@ -2,17 +2,17 @@
 
 https://www.hackingwithswift.com/100/swiftui/26
 
-> "... an app designed to help coffee drinkers get a good night’s sleep by asking them three questions:"
-> "1. When do they want to wake up?"
-> "2. Roughly how many hours of sleep do they want?"
-> "3. How many cups of coffee do they drink per day?"
+> ... an app designed to help coffee drinkers get a good night’s sleep by asking them three questions:
+> 1. When do they want to wake up?
+> 2. Roughly how many hours of sleep do they want?
+> 3. How many cups of coffee do they drink per day?
 
 ## Topics
 Stepper, DatePicker, Date, DateComponents, DateFormatters, Create ML, 
 
 |Day 26 :white_check_mark: | Day 27 :white_check_mark: | Day 28 :white_check_mark: |
 |:--|:--|:--|
-|Worked with Stepper, DatePicker, Date, DateComponents, DateFormatters, learned about one-sided ranges, and trained my first model ever using Create ML|||
+|Worked with Stepper, DatePicker, Date, DateComponents, DateFormatters, learned about one-sided ranges, and trained my first model ever using Create ML| Continued working with the 4th project, created the UI, and also connected the model with the project|Completed the challenges for the fourth project|
 
 ## Challenges
 
@@ -23,4 +23,4 @@ From [Hacking with Swift](https://www.hackingwithswift.com/books/ios-swiftui/bet
 
 |before challenges| after challenges|
 |:--:|:--:|
-|![]()|![]()|
+|![before](Screenshots/D27_ALERT.png)|![after](Screenshots/D28_EXTRA.png)|
