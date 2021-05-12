@@ -1,4 +1,4 @@
-# Project #4 - WordScramble
+# Project #5 - WordScramble
 
 https://www.hackingwithswift.com/100/swiftui/29
 
@@ -22,4 +22,4 @@ From [Hacking with Swift](https://www.hackingwithswift.com/books/ios-swiftui/wor
 
 |before challenges| after challenges|
 |:--:|:--:|
-|![before](Data/D30.mov)|![after](Data/D31.move)|
+|![before](Data/D30.mov)|![after](Data/D31.mov)|
