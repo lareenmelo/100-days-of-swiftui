@@ -8,7 +8,7 @@ https://www.hackingwithswift.com/100/swiftui/32
 |Day 32 :white_check_mark: | Day 33 :white_check_mark: | Day 34 :white_check_mark: |
 |:--|:--|:--|
 | Learned about implicit, explicit, and custom animations. Created pretty cool animations. | Continued working with animations, animating gestures, showing and hiding views, and building custom transitions using ViewModifier. | Completed the challenges for the project|
-|![D32](Data/D32.mov)|![D33](Data/D33.mov)|![D34](Data/D34.mov)|
+|![D32](Data/D32.mov)|![D33](Data/D33.mov)|![D34](https://user-images.githubusercontent.com/12801333/118752378-f8f9e600-b830-11eb-9c6e-d451b1eb0e4c.mp4)|
 
 ## Challenges
 
