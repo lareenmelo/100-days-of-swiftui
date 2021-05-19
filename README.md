@@ -24,6 +24,6 @@
 
 | Type | Status |
 |:--|--|
-| Projects |5/19 |
+| Projects | 6/19 |
 |Milestone Projects|1/6|
 |Challenge Days| 1/1|
