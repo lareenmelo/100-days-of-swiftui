@@ -5,11 +5,10 @@ https://www.hackingwithswift.com/100/swiftui/32
 > ... we’ll be looking at easier animations, but tomorrow we’ll progress onto more difficult stuff – it’s a good idea to be aware of both, so you can tackle whatever problems come up in the future.
 
 ## Topics
-List, Bundle, UITextChecker, onAppear, onCommit
 |Day 32 :white_check_mark: | Day 33 :white_check_mark: | Day 34 :white_check_mark: |
 |:--|:--|:--|
 | Learned about implicit, explicit, and custom animations. Created pretty cool animations. | Continued working with animations, animating gestures, showing and hiding views, and building custom transitions using ViewModifier. | Completed the challenges for the project|
-| | | |
+|![D32](Data/D32.mov)|![D33](Data/D33.mov)|![D34](Data/D34.mov)|
 
 ## Challenges
 
