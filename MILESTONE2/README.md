@@ -9,4 +9,4 @@ https://www.hackingwithswift.com/100/swiftui/35
 
 |Day 35 :white_check_mark: | Media |
 |:--|:--:|
-| Completed the first milestone project |![Data/D35.mov]() |
+| Completed the first milestone project |![Eduntainment](Data/D35.mov) |
