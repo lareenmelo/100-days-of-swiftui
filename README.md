@@ -1,4 +1,4 @@
-# 100-day-of-swiftui
+# 100-days-of-swiftui
 
 * [Day 1](https://github.com/lareenmelo/100-days-of-swiftui/blob/main/D1-D15/D1.md)
 * [Day 2](https://github.com/lareenmelo/100-days-of-swiftui/blob/main/D1-D15/D2.md)
@@ -26,6 +26,6 @@
 
 | Type | Status |
 |:--|--|
-| Projects | 6/19 |
-|Milestone Projects| 2/6 |
-|Challenge Days| 1/1 |
+| Projects | 7/19 |
+| Milestone Projects | 2/6 |
+| Challenge Days | 1/1 |
