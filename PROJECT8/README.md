@@ -10,7 +10,7 @@ NavigationLink, Codable, ScrollView, GeometricReader
 |Day 39 :white_check_mark: | Day 40 :white_check_mark: | Day 41 :white_check_mark: | Day 42 :white_check_mark: |
 |:--|:--|:--|:--|
 | learned about geometricreader, navigationlinks and scrollviews  | started project, used navigation view and, worked with more complex JSON files. |  |  |
-|![D39](Data/D39.mov)|![D40](Data/D40.mov)|![D41](Data/D41.mov)|![D42](Data/D42.mov)
+|![D39](Data/D39.mov)|![D40](https://user-images.githubusercontent.com/12801333/119247119-29a18e80-bb55-11eb-8409-55f13ef83afa.mov)|![D41](Data/D41.mov)|![D42](Data/D42.mov)
 
 ## Challenges
 
