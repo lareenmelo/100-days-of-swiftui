@@ -7,95 +7,83 @@
 
 import SwiftUI
 
-struct Spirograph: Shape {
-    let innerRadius: Int
-    let outerRadius: Int
-    let distance: Int
-    let amount: CGFloat
 
-    // gcd for the inner and outer radius
-    func gcd(_ a: Int, _ b: Int) -> Int {
-        var a = a
-        var b = b
-        
-        while b != 0 {
-            let temp = b
-            b = a % b
-            a = temp
-        }
-        
-        return a
+// 1
+struct Arrow: InsettableShape {
+    // 2
+    var insetAmount: CGFloat = 0
+    var animatableData: CGFloat {
+        get { insetAmount }
+        set { self.insetAmount = newValue }
     }
     
     func path(in rect: CGRect) -> Path {
-        let divisor = gcd(innerRadius, outerRadius)
-        let outerRadius = CGFloat(self.outerRadius)
-        let innerRadius = CGFloat(self.innerRadius)
-        let distance = CGFloat(self.distance)
-        let difference = innerRadius - outerRadius
-        let endPoint = ceil(2 * CGFloat.pi * outerRadius / CGFloat(divisor)) * amount
-
         var path = Path()
-
-        for theta in stride(from: 0, through: endPoint, by: 0.01) {
-            var x = difference * cos(theta) + distance * cos(difference / outerRadius * theta)
-            var y = difference * sin(theta) - distance * sin(difference / outerRadius * theta)
-
-            x += rect.width / 2
-            y += rect.height / 2
-
-            if theta == 0 {
-                path.move(to: CGPoint(x: x, y: y))
-            } else {
-                path.addLine(to: CGPoint(x: x, y: y))
-            }
-        }
-
-        return path
         
+        // FIXME: ma'am, this is brute-force
+        path.move(to: CGPoint(x: rect.minX, y: rect.midY))
+        path.addLine(to: CGPoint(x: rect.midX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.midX, y: rect.maxY / 1.5))
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY / 1.5))
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY + 45))
+        path.addLine(to: CGPoint(x: rect.midX + 1, y: rect.midY / 1.65))
+        path.addLine(to: CGPoint(x: rect.midX, y: rect.minY / 1.5))
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.midY))
+        
+        return path
+    }
+    
+    // 2
+    func inset(by amount: CGFloat) -> some InsettableShape {
+        var arrow = self
+        arrow.insetAmount += amount
+        return arrow
     }
 }
 
 struct ContentView: View {
-    @State private var innerRadius = 125.0
-    @State private var outerRadius = 75.0
-    @State private var distance = 25.0
-    @State private var amount: CGFloat = 1.0
-    @State private var hue = 0.6
+    @State private var insetAmount: CGFloat = 5
+    @State private var animationRotation = false
+    private var arrayColors = [
+        LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .leading, endPoint: .trailing),
+        LinearGradient(gradient: Gradient(colors: [Color.pink, Color.purple]), startPoint: .leading, endPoint: .trailing),
+        LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .leading, endPoint: .trailing),
+        LinearGradient(gradient: Gradient(colors: [Color.pink, Color.red]), startPoint: .leading, endPoint: .trailing),
+        LinearGradient(gradient: Gradient(colors: [Color.yellow, Color.orange]), startPoint: .leading, endPoint: .trailing),
+        LinearGradient(gradient: Gradient(colors: [Color.yellow, Color.green]), startPoint: .leading, endPoint: .trailing),
+        LinearGradient(gradient: Gradient(colors: [Color.green, Color.blue]), startPoint: .leading, endPoint: .trailing)
+    ]
     
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(spacing: 16) {
+            Text("Tap the arrow's border!")
+                .font(.title)
+                .fontWeight(.medium)
             Spacer()
-            Spirograph(innerRadius: Int(innerRadius), outerRadius: Int(outerRadius), distance: Int(distance), amount: amount)
-                .stroke(Color(hue: hue, saturation: 1, brightness: 1), lineWidth: 1)
-                .frame(width: 300, height: 300)
-
+            Arrow(insetAmount: insetAmount)
+                // 2
+                .strokeBorder(arrayColors[Int.random(in: 0...6)], style: StrokeStyle(lineWidth: insetAmount, lineCap: .round, lineJoin: .round))
+                .frame(width: 250, height: 150)
+                .rotationEffect(.degrees(animationRotation ? Double.random(in: 1...360) : 0))
+                .animation(.linear)
+                // 2
+                .onTapGesture {
+                    self.animationRotation = false
+                    withAnimation(Animation.easeIn(duration: 1)) {
+                        self.insetAmount = CGFloat.random(in: 10...40)
+                    }
+                }
             Spacer()
             
-            Group {
-                Text("Inner radius: \(Int(innerRadius))")
-                Slider(value: $innerRadius, in: 10...150, step: 1)
-                    .padding([.horizontal, .bottom])
-                
-                Text("Outer radius: \(Int(outerRadius))")
-                Slider(value: $outerRadius, in: 10...150, step: 1)
-                    .padding([.horizontal, .bottom])
-
-                Text("Distance: \(Int(distance))")
-                Slider(value: $distance, in: 1...150, step: 1)
-                    .padding([.horizontal, .bottom])
-
-                Text("Amount: \(amount, specifier: "%.2f")")
-                Slider(value: $amount)
-                    .padding([.horizontal, .bottom])
-
-                Text("Color")
-                Slider(value: $hue)
-                    .padding(.horizontal)
-
-
+            Button("Tap me!") {
+                self.animationRotation.toggle()
             }
-            
+            .frame(width: 160, height: 40)
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(10.0)
+
+            Spacer()
         }
     }
 }
