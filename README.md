@@ -25,9 +25,10 @@
 * [Day 36 - Day 38](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/PROJECT7)
 * [Day 39 - Day 42](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/PROJECT8)
 * [Day 43 - Day 46](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/PROJECT9)
+* [Day 47](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/MILESTONE3)
 
 | Type | Status |
 |:--|--|
 | Projects | 9/19 |
-| Milestone Projects | 2/6 |
+| Milestone Projects | 3/6 |
 | Challenge Days | 1/1 |
