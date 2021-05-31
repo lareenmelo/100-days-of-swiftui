@@ -9,4 +9,4 @@ https://www.hackingwithswift.com/100/swiftui/47
 
 |Day 47 :white_check_mark: | Media |
 |:--|:--:|
-| Completed the milestone project! | ![D47](Data/D47.mov) |
+| Completed the milestone project! | ![D47](https://user-images.githubusercontent.com/12801333/120137240-dd33ff80-c1a1-11eb-8e42-a73f08410cf8.mov) |
