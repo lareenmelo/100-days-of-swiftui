@@ -12,6 +12,12 @@ struct CheckoutView: View {
     @State private var confirmationMessage = ""
     @State private var showingConfirmation = false
     
+    
+    // 2
+    @State private var showingAlert = false
+    @State private var errorMessage = ""
+    @State var showingErrorMessage = false
+    
     var body: some View {
         GeometryReader { geo in
             ScrollView {
@@ -20,8 +26,8 @@ struct CheckoutView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: geo.size.width)
-                    
-                    Text("Your total is $\(self.order.cost, specifier: "%.2f")")
+                    // 3
+                    Text("Your total is $\(self.order.order.cost, specifier: "%.2f")")
                         .font(.title)
                     
                     Button("Place Order") {
@@ -31,14 +37,20 @@ struct CheckoutView: View {
                 }
             }
         }
-        .alert(isPresented: $showingConfirmation) {
-            Alert(title: Text("Thank you!"), message: Text(confirmationMessage), dismissButton: .default(Text("OK")))
+        // 2
+        .alert(isPresented: $showingAlert) {
+            if showingErrorMessage {
+                return Alert(title: Text("D'oh"), message: Text(errorMessage), dismissButton: .default(Text("OK")))
+                
+            } else {
+                return Alert(title: Text("Thank you!"), message: Text(confirmationMessage), dismissButton: .default(Text("OK")))
+            }
         }
     }
     
     
     func placeOrder() {
-        guard let encoded = try? JSONEncoder().encode(order) else {
+        guard let encoded = try? JSONEncoder().encode(order.order) else { // 3
             print("Failed to encode order")
             return
         }
@@ -55,12 +67,18 @@ struct CheckoutView: View {
             
             guard let data = data else {
                 print("No data response in: \(error?.localizedDescription ?? "Unknown error").")
+                // 2
+                self.showingAlert = true
+                self.errorMessage = error?.localizedDescription ?? "Unknown error"
+                self.showingErrorMessage = true
                 return
             }
-            
-            if let decodedOrder = try? JSONDecoder().decode(Order.self, from: data) {
-                self.confirmationMessage = "Your order for \(decodedOrder.quantity)x \(Order.types[decodedOrder.type].lowercased()) cupcakes is on its way!"
+            // 3
+            if let decodedOrder = try? JSONDecoder().decode(WrappedOrder.self, from: data) {
+                self.confirmationMessage = "Your order for \(decodedOrder.quantity)x \(WrappedOrder.types[decodedOrder.type].lowercased()) cupcakes is on its way!"
                 self.showingConfirmation = true
+                self.showingAlert = true
+
             } else {
                 print("Invalid response from server")
             }
