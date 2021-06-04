@@ -28,6 +28,7 @@
 * [Day 47](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/MILESTONE3)
 * [Day 48](https://www.hackingwithswift.com/100/swiftui/48)
 * [Day 49 - Day 52](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/PROJECT10)
+* [Day 53 - Day 56](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/PROJECT11)
 
 | Type | Status |
 |:--|--|
