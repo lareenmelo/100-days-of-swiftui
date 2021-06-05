@@ -14,7 +14,9 @@
 		0D6154DF266A5CB900FA8996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D6154DE266A5CB900FA8996 /* Assets.xcassets */; };
 		0D6154E2266A5CB900FA8996 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D6154E1266A5CB900FA8996 /* Preview Assets.xcassets */; };
 		0D6154E5266A5CB900FA8996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D6154E3266A5CB900FA8996 /* LaunchScreen.storyboard */; };
-		0D6154EE266A6E0D00FA8996 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6154ED266A6E0D00FA8996 /* Student.swift */; };
+		0D6154F2266B190C00FA8996 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6154F1266B190C00FA8996 /* AddBookView.swift */; };
+		0D6154F5266B243500FA8996 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6154F4266B243500FA8996 /* RatingView.swift */; };
+		0D6154F8266B282B00FA8996 /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6154F7266B282B00FA8996 /* EmojiRatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +29,9 @@
 		0D6154E1266A5CB900FA8996 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0D6154E4266A5CB900FA8996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D6154E6266A5CB900FA8996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0D6154ED266A6E0D00FA8996 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		0D6154F1266B190C00FA8996 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
+		0D6154F4266B243500FA8996 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		0D6154F7266B282B00FA8996 /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +72,9 @@
 				0D6154E6266A5CB900FA8996 /* Info.plist */,
 				0D6154DB266A5CB600FA8996 /* Bookworm.xcdatamodeld */,
 				0D6154E0266A5CB900FA8996 /* Preview Content */,
-				0D6154ED266A6E0D00FA8996 /* Student.swift */,
+				0D6154F1266B190C00FA8996 /* AddBookView.swift */,
+				0D6154F7266B282B00FA8996 /* EmojiRatingView.swift */,
+				0D6154F4266B243500FA8996 /* RatingView.swift */,
 			);
 			path = Bookworm;
 			sourceTree = "<group>";
@@ -153,9 +159,11 @@
 			files = (
 				0D6154D6266A5CB600FA8996 /* AppDelegate.swift in Sources */,
 				0D6154DD266A5CB600FA8996 /* Bookworm.xcdatamodeld in Sources */,
+				0D6154F8266B282B00FA8996 /* EmojiRatingView.swift in Sources */,
 				0D6154D8266A5CB600FA8996 /* SceneDelegate.swift in Sources */,
-				0D6154EE266A6E0D00FA8996 /* Student.swift in Sources */,
+				0D6154F5266B243500FA8996 /* RatingView.swift in Sources */,
 				0D6154DA266A5CB600FA8996 /* ContentView.swift in Sources */,
+				0D6154F2266B190C00FA8996 /* AddBookView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
