@@ -5,7 +5,7 @@ https://www.hackingwithswift.com/100/swiftui/53
 > ...  an app to track which books you’ve read and what you thought of them.
 
 ## Topics
-Core Data, @Binding, AnyView, @Environment
+Core Data, @Binding, AnyView, @Environment, NSManagedObjectContext, NSSortDescriptor
 
 |Day 53 :white_check_mark: | Day 54 :white_check_mark: | Day 55 :white_check_mark: | Day 56 :white_check_mark: |
 |:--|:--|:--|:--|
