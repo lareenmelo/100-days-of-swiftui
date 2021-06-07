@@ -14,14 +14,29 @@ struct DetailView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var showingDeleteAlert = false
 
+    let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller", "Unknown"]
+
+    // 3
+    var formattedString: String {
+        if let date = book.date {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "E, d MMM yyyy h:mm a"
+            
+            return formatter.string(from: date)
+
+        } else {
+            return "N/A"
+        }
+    }
+    
     var body: some View {
         GeometryReader { geometry in
             VStack {
                 ZStack(alignment: .bottomTrailing) {
-                    Image(self.book.genre ?? "Fantasy")
+                    Image(genre(self.book.genre)) // 1
                         .frame(maxWidth: geometry.size.width)
 
-                    Text(self.book.genre?.uppercased() ?? "FANTASY")
+                    Text(genre(self.book.genre).uppercased()) // 1
                         .font(.caption)
                         .fontWeight(.black)
                         .padding(8)
@@ -33,6 +48,9 @@ struct DetailView: View {
                 
                 Text(self.book.author ?? "Unknown author")
                     .font(.title)
+                    .foregroundColor(.secondary)
+                // 3
+                Text("Added on " + formattedString)
                     .foregroundColor(.secondary)
 
                 Text(self.book.review ?? "No review")
@@ -58,11 +76,19 @@ struct DetailView: View {
         }
     }
     
+    // 1
+    func genre(_ text: String?) -> String {
+        guard let genre = text else { return "Unknown" }
+        if genres.contains(genre) {
+            return genre
+        } else {
+            return "Unknown"
+        }
+    }
+    
     func deleteBook() {
         moc.delete(book)
 
-        // uncomment this line if you want to make the deletion permanent
-        // try? self.moc.save()
         presentationMode.wrappedValue.dismiss()
     }
 }
