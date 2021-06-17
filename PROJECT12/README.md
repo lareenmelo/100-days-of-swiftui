@@ -1,4 +1,4 @@
-# Project #12 - CoreDataProject
+ # Project #12 - CoreDataProject
 
 https://www.hackingwithswift.com/100/swiftui/57
 
