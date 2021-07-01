@@ -13,7 +13,7 @@
 		FE062F33268AA342007C602C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE062F32268AA342007C602C /* Assets.xcassets */; };
 		FE062F36268AA342007C602C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE062F35268AA342007C602C /* Preview Assets.xcassets */; };
 		FE062F39268AA342007C602C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE062F37268AA342007C602C /* LaunchScreen.storyboard */; };
-		FEDC9F98268C0B51008AC2B7 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDC9F97268C0B51008AC2B7 /* ImagePicker.swift */; };
+		FE98C751268E74030047EBBD /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98C750268E74030047EBBD /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		FE062F35268AA342007C602C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FE062F38268AA342007C602C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE062F3A268AA342007C602C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FEDC9F97268C0B51008AC2B7 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		FE98C750268E74030047EBBD /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 				FE062F2C268AA341007C602C /* AppDelegate.swift */,
 				FE062F2E268AA341007C602C /* SceneDelegate.swift */,
 				FE062F30268AA341007C602C /* ContentView.swift */,
-				FEDC9F97268C0B51008AC2B7 /* ImagePicker.swift */,
+				FE98C750268E74030047EBBD /* ImagePicker.swift */,
 				FE062F32268AA342007C602C /* Assets.xcassets */,
 				FE062F37268AA342007C602C /* LaunchScreen.storyboard */,
 				FE062F3A268AA342007C602C /* Info.plist */,
@@ -149,7 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE062F2D268AA341007C602C /* AppDelegate.swift in Sources */,
-				FEDC9F98268C0B51008AC2B7 /* ImagePicker.swift in Sources */,
+				FE98C751268E74030047EBBD /* ImagePicker.swift in Sources */,
 				FE062F2F268AA341007C602C /* SceneDelegate.swift in Sources */,
 				FE062F31268AA341007C602C /* ContentView.swift in Sources */,
 			);
