@@ -18,6 +18,8 @@ struct ContentView: View {
     let context = CIContext()
     @State private var showingFilterSheet = false
     @State private var processedImage: UIImage?
+    // 1
+    @State private var showingNoImageToSaveAlert = false
 
 
     var body: some View {
@@ -65,7 +67,11 @@ struct ContentView: View {
                     Spacer()
                     
                     Button("Save") {
-                        guard let processedImage = self.processedImage else { return }
+                        // 1
+                        guard let processedImage = self.processedImage else {
+                            showingNoImageToSaveAlert = true
+                            return
+                        }
 
                         let imageSaver = ImageSaver()
                         imageSaver.writeToPhotoAlbum(image: processedImage)
@@ -89,6 +95,10 @@ struct ContentView: View {
                 .default(Text("Vignette")) { self.setFilter(CIFilter.vignette()) },
                 .cancel()
             ])
+        }
+        // 1
+        .alert(isPresented: $showingNoImageToSaveAlert) {
+            Alert(title: Text("Uh-Oh"), message: Text("There's no image to save. Please upload an image first."), dismissButton: .cancel())
         }
     }
     
