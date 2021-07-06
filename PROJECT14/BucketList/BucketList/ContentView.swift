@@ -6,28 +6,44 @@
 //
 
 import SwiftUI
+import LocalAuthentication
 
 struct ContentView: View {
+    @State private var isUnlocked = false
+
     var body: some View {
-        Text("Hello, world!")
-            .onTapGesture {
-                let str = "Test Message"
-                let url = self.getDocumentsDirectory().appendingPathComponent("message.txt")
-                
-                do {
-                    try str.write(to: url, atomically: true, encoding: .utf8)
-                    let input = try String(contentsOf: url)
-                    print(input)
-                } catch {
-                    print(error.localizedDescription)
-                }
+        VStack {
+            if self.isUnlocked {
+                Text("Unlocked")
+            } else {
+                Text("Locked")
             }
+        }
+        .onAppear(perform: authenticate)
     }
     
-    func getDocumentsDirectory() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        
-        return paths[0]
+    func authenticate() {
+        let context = LAContext()
+        var error: NSError?
+
+        // check whether biometric authentication is possible
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            // it's possible, so go ahead and use it
+            let reason = "We need to unlock your data."
+
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
+                // authentication has now completed
+                DispatchQueue.main.async {
+                    if success {
+                        self.isUnlocked = true
+                    } else {
+                        // there was a problem
+                    }
+                }
+            }
+        } else {
+            // no biometrics
+        }
     }
 }
 
