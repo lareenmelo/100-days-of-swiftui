@@ -10,7 +10,7 @@ Comparable, operator overloading, FileManager, MVC, MapKit, LocalAuthentication,
 |Day 68 :white_check_mark: | Day 69 :white_check_mark: | Day 70 :white_check_mark: | Day 71 :white_check_mark: | Day 72 :white_check_mark: | Day 73 :white_check_mark: |
 |:--|:--|:--|:--|:--|:--|
 | learned about Comparable, operator overloading, FileManager, writing data to the documents directory, and handling a View's state using Enums.  | worked with MapKit, UIViewRepresentable, and LocalAuthentication (used it to work with Touch ID and Face ID).  | worked more with MKMapView, MKPointAnnotation, got more comfortable with coordinators, and many MapKit delegate methods 😭. |  |  |  |
-|  🗺  | ![D69](Data/D69.png)|  ![D70](Data/D70.mp4) |  |  |  |  |
+|  🗺  | ![D69](Data/D69.png)|  ![D70](https://user-images.githubusercontent.com/12801333/124700638-0ccdda00-debb-11eb-9092-560b34e0d472.mp4) |  |  |  |  |
 
 ## Challenges
 
