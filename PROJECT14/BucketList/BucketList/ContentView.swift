@@ -55,7 +55,6 @@ struct UnlockedView: View {
                 }
             }
         }
-        .onAppear(perform: loadData)
         .alert(isPresented: $showingPlaceDetails) {
             Alert(title: Text(selectedPlace?.title ?? "Unknown"), message: Text(selectedPlace?.subtitle ?? "Missing place information."), primaryButton: .default(Text("OK")), secondaryButton: .default(Text("Edit")) {
                 self.showingEditScreen = true
@@ -66,6 +65,7 @@ struct UnlockedView: View {
                 EditView(placemark: self.selectedPlace!)
             }
         }
+        .onAppear(perform: loadData)
     }
     
     func getDocumentsDirectory() -> URL {
