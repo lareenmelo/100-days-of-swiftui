@@ -9,7 +9,7 @@ Labels, VoiceOver, Hints, Decorations,
 
 |Day 74 :white_check_mark: | Day 75 :white_check_mark: | Day 76 :white_check_mark: |
 |:--|:--|:--|
-|  |  |  | 
+| today I learned about accessibility labels, hints, traits, and communicating important/unimportant views with VoiceOver. |  |  | 
 | ♿️  | ![D75](Data/D75.png)| ![D76](DATA/D76) | 
 
 ## Challenges
