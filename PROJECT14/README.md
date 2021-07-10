@@ -19,6 +19,7 @@ From [Hacking with Swift](https://www.hackingwithswift.com/books/ios-swiftui/buc
 >2. Having a complex `if` condition in the middle of `ContentView` isn’t easy to read – can you rewrite it so that the `MapView`, `Circle`, and `Button` are part of their own view? This might take more work than you think!
 >3. Our app silently fails when errors occur during biometric authentication. Add code to show those errors in an alert, but be careful: you can only add one `alert()` modifier to each view.
 
+
 | locked screen | unlocked screen - locations |
 |:--:|:--:|
-|![locked](https://user-images.githubusercontent.com/12801333/125153888-d98e8380-e124-11eb-87e4-c5919f21ec3c.png)|![unlocked](https://user-images.githubusercontent.com/12801333/125153894-df846480-e124-11eb-8500-85060bf41592.png)|
+|<img width="516" alt="locked" src="https://user-images.githubusercontent.com/12801333/125153950-3853fd00-e125-11eb-9cb4-612bf6914cf4.png"> | <img width="516" alt="unlocked" src="https://user-images.githubusercontent.com/12801333/125153956-47d34600-e125-11eb-8194-b6dfb3eb00da.png"> |
