@@ -33,6 +33,7 @@
 * [Day 60 - Day 61](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/MILESTONE4)
 * [Day 62 - Day 67](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/PROJECT13)
 * [Day 68 - Day 73](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/PROJECT14)
+* [Day 74 - Day 76](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/PROJECT15)
 
 | Type | Status |
 |:--|--|
