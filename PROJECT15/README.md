@@ -9,8 +9,8 @@ Labels, VoiceOver, Hints, Decorations,
 
 |Day 74 :white_check_mark: | Day 75 :white_check_mark: | Day 76 :white_check_mark: |
 |:--|:--|:--|
-| today I learned about accessibility labels, hints, traits, and communicating important/unimportant views with VoiceOver. | we improved the accessibility of previous apps we've built (Guess the Flag, World Scram and Bookworm). |  | 
-| ♿️  | ![D75](Data/D75.mp4)| ![D76](DATA/D76) | 
+| today I learned about accessibility labels, hints, traits, and communicating important/unimportant views with VoiceOver. | we improved the accessibility of previous apps we've built (Guess the Flag, World Scram and Bookworm). **click on image below to listen to VoiceOver doing its magic** |  | 
+| ♿️  | ![D75](https://user-images.githubusercontent.com/12801333/125219225-77539100-e292-11eb-84dd-7d39e80d5c1c.mp4)| ![D76](DATA/D76) | 
 
 ## Challenges
 
