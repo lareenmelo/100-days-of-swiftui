@@ -14,7 +14,7 @@ Labels, VoiceOver, Hints, Decorations,
 
 ## Challenges
 
-From [Hacking with Swift]():
->1. 
->2. 
->3. 
+From [Hacking with Swift](https://www.hackingwithswift.com/books/ios-swiftui/accessibility-wrap-up):
+>1. The check out view in Cupcake Corner uses an image that doesn’t add anything to the UI, so find a way to make the screenreader not read it out.
+>2. Fix the steppers in BetterRest so that they read out useful information when the user adjusts their values.
+>3. Do a full accessibility review of Moonshot – what changes do you need to make so that it’s fully accessible?
