@@ -27,11 +27,17 @@ struct ContentView: View {
                         Text(mission.displayName)
                         .font(.headline)
                         
-                        Text(showCrewNames ? crewMembers(mission) : mission.formattedLaunchDate)
+                        if showCrewNames {
+                            Text(crewMembers(mission))
+                                .accessibility(label: Text(accessibleCrewNames(mission)))
 
-                        
+                        } else {
+                            Text(mission.formattedLaunchDate)
+                                .accessibility(label: Text(mission.accessibleLaunchDate))
+                        }
                     }
                 }
+                .accessibility(removeTraits: .isButton)
             }
             .navigationBarTitle("Moonshot")
             // 3
@@ -56,6 +62,21 @@ struct ContentView: View {
         string = astronautsNames.joined(separator: ", ")
         
         return string
+    }
+    
+    func accessibleCrewNames(_ mission: Mission) -> String {
+        var string = ""
+        var astronautsNames = [String]()
+        for member in mission.crew {
+            if let match = self.astronauts.first(where: {$0.id == member.name} ) {
+                astronautsNames.append(match.name)
+            }
+        }
+        
+        string = astronautsNames.joined(separator: ", ")
+        
+        
+        return string.replacingOccurrences(of: ".", with: " ")
     }
 }
 

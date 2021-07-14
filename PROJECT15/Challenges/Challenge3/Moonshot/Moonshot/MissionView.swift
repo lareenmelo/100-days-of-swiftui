@@ -31,16 +31,18 @@ struct MissionView: View {
         GeometryReader { geometry in
             ScrollView(.vertical) {
                 VStack {
-                    Image(self.mission.image)
+                    Image(decorative: self.mission.image)
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: geometry.size.width * 0.7)
                         .padding(.top)
+                        
                     
                     // 1
                     Text(self.mission.formattedLaunchDate)
                         .fontWeight(.bold)
                         .padding(.top)
+                        .accessibility(label: Text(self.mission.accessibleLaunchDate))
                     
                     Text(self.mission.description)
                         .padding()
@@ -48,7 +50,7 @@ struct MissionView: View {
                     ForEach(self.astronauts, id: \.role) { crewMember in
                         NavigationLink(destination: AstronautView(astronaut: crewMember.astronaut)) {
                             HStack {
-                                Image(crewMember.astronaut.id)
+                                Image(decorative: crewMember.astronaut.id)
                                     .resizable()
                                     .frame(width: 83, height: 60)
                                     .clipShape(Capsule())
@@ -57,8 +59,13 @@ struct MissionView: View {
                                 VStack(alignment: .leading) {
                                     Text(crewMember.astronaut.name)
                                         .font(.headline)
+                                        .accessibility(label: Text(accessibilityAustronautName(crewMember.astronaut.name)))
+
                                     Text(crewMember.role)
                                         .foregroundColor(.secondary)
+                                        .accessibility(label: Text(crewMember.role))
+                                        .accessibility(value: Text("Role"))
+
                                     
                                 }
                                 
@@ -79,6 +86,10 @@ struct MissionView: View {
     struct CrewMember: Codable {
         let role: String
         let astronaut: Astronaut
+    }
+    
+    func accessibilityAustronautName(_ name: String) -> String {
+        return name.replacingOccurrences(of: ".", with: " ")
     }
 }
 

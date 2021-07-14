@@ -37,6 +37,6 @@ struct Mission: Codable, Identifiable {
     }
     
     var accessibleLaunchDate: String {
-        formattedLaunchDate.replacingOccurrences(of: "Date: N/A", with: "Date is not applicable")
+        formattedLaunchDate.replacingOccurrences(of: "N/A", with: "Date is not available")
     }
 }
