@@ -58,8 +58,8 @@ struct Person: Identifiable, Codable {
     }
 }
 
-extension Person: Equatable {
-    static func ==(lhs: Person, rhs: Person) -> Bool {
-        lhs.id == rhs.id
+extension Person: Comparable {
+    static func < (lhs: Person, rhs: Person) -> Bool {
+        lhs.name > rhs.name
     }
 }

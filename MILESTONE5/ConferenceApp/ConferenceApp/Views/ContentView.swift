@@ -11,10 +11,14 @@ struct ContentView: View {
     @State private var showingAddNewProfile = false
     @ObservedObject var conferenceAttendees = Attendees()
     
+    var sortedList: [Person] {
+        return conferenceAttendees.attendeesList.sorted(by: >)
+    }
+    
     var body: some View {
         NavigationView {
             List {
-                ForEach(conferenceAttendees.attendeesList) { attendee in
+                ForEach(sortedList) { attendee in
                     NavigationLink(destination: PersonDetailView(attendee: attendee)) {
                         HStack {
                             self.loadImage(for: attendee)
