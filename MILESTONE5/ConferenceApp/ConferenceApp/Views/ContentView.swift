@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+// FIXME - Deletion is not working correctly
 
 struct ContentView: View {
     @State private var showingAddNewProfile = false
