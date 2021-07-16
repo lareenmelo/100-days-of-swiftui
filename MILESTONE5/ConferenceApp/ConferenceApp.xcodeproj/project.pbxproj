@@ -18,6 +18,8 @@
 		FE28F73E269FD6F90011DFD1 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE28F73D269FD6F90011DFD1 /* ImagePicker.swift */; };
 		FE28F740269FD8640011DFD1 /* UploadImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE28F73F269FD8640011DFD1 /* UploadImageView.swift */; };
 		FE28F74226A128110011DFD1 /* Attendees.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE28F74126A128110011DFD1 /* Attendees.swift */; };
+		FE28F74426A14F040011DFD1 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE28F74326A14F040011DFD1 /* MapView.swift */; };
+		FE28F74626A151300011DFD1 /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE28F74526A151300011DFD1 /* LocationFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		FE28F73D269FD6F90011DFD1 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		FE28F73F269FD8640011DFD1 /* UploadImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageView.swift; sourceTree = "<group>"; };
 		FE28F74126A128110011DFD1 /* Attendees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendees.swift; sourceTree = "<group>"; };
+		FE28F74326A14F040011DFD1 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		FE28F74526A151300011DFD1 /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 			children = (
 				FE28F738269FD4300011DFD1 /* Person.swift */,
 				FE28F74126A128110011DFD1 /* Attendees.swift */,
+				FE28F74526A151300011DFD1 /* LocationFetcher.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				FE28F73D269FD6F90011DFD1 /* ImagePicker.swift */,
+				FE28F74326A14F040011DFD1 /* MapView.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -186,11 +192,13 @@
 			files = (
 				FE28F739269FD4300011DFD1 /* Person.swift in Sources */,
 				FE28F722269FCDAF0011DFD1 /* AppDelegate.swift in Sources */,
+				FE28F74626A151300011DFD1 /* LocationFetcher.swift in Sources */,
 				FE28F724269FCDAF0011DFD1 /* SceneDelegate.swift in Sources */,
 				FE28F73E269FD6F90011DFD1 /* ImagePicker.swift in Sources */,
 				FE28F736269FD1AD0011DFD1 /* PersonDetailView.swift in Sources */,
 				FE28F726269FCDAF0011DFD1 /* ContentView.swift in Sources */,
 				FE28F740269FD8640011DFD1 /* UploadImageView.swift in Sources */,
+				FE28F74426A14F040011DFD1 /* MapView.swift in Sources */,
 				FE28F74226A128110011DFD1 /* Attendees.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

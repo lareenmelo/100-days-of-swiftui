@@ -20,6 +20,9 @@ struct UploadImageView: View {
     @State private var handle = ""
     
     
+    // Day 78
+    private let locationFetcher = LocationFetcher()
+
     var body: some View {
         NavigationView {
             Form {
@@ -54,6 +57,7 @@ struct UploadImageView: View {
                     TextField("Add a name", text: $name)
                     TextField("Add their twitter handle", text: $handle)
                         .autocapitalization(.none)
+                        .disableAutocorrection(true)
                 }
             }
             .navigationBarTitle("Add a new contact")
@@ -64,6 +68,10 @@ struct UploadImageView: View {
             )
             .alert(isPresented: $showingNoNameAlert) {
                 Alert(title: Text("Uh-Oh"), message: Text("Please write down a name for this person"), dismissButton: .default(Text("Ok")))
+            }
+            // Day 78
+            .onAppear() {
+                self.locationFetcher.start()
             }
         }
     }
@@ -92,6 +100,16 @@ struct UploadImageView: View {
             }
         }
         
+        // Day 78
+        if let location = self.locationFetcher.lastKnownLocation {
+            attendee.latitude = location.latitude
+            attendee.longitude = location.longitude
+            attendee.locationRecorded = true
+        }
+        else {
+            attendee.locationRecorded = false
+        }
+
         self.attendees.attendeesList.append(attendee)
         self.presentationMode.wrappedValue.dismiss()
     }

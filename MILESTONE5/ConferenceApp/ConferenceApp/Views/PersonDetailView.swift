@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct PersonDetailView: View {
     var attendee: Person
@@ -14,11 +15,35 @@ struct PersonDetailView: View {
         getImage(for: attendee)
             .resizable()
             .scaledToFit()
-            // for placeholders
             .foregroundColor(Color.gray)
             .navigationBarTitle(Text(attendee.name), displayMode: .inline)
-        Text("@" + attendee.twitterHandle)
-        Spacer()
+        // Day 78
+        Form {
+            Section(header: Text("Location Met")) {
+                if attendee.locationRecorded {
+                    NavigationLink(destination: MapView(annotation: getAnnotation()).ignoresSafeArea(.all)) {
+                        MapView(annotation: getAnnotation())
+                            .frame(minHeight: 150)
+                    }
+                    
+                } else {
+                    Text("Location was not recorded for this contact")
+                        .padding()
+                }
+            }
+            
+            Section(header: Text("Twitter Handle")) {
+                HStack {
+                    Image("twitter")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 32, height: 32, alignment: .center)
+                        .clipShape(Circle())
+
+                    Text("@" + attendee.twitterHandle)
+                }
+            }
+        }
     }
     
     func getImage(for person: Person) -> Image {
@@ -29,6 +54,13 @@ struct PersonDetailView: View {
         }
 
         return Image(systemName: "person.crop.square")
+    }
+    
+    // Day 78
+    func getAnnotation() -> MKPointAnnotation {
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2D(latitude: attendee.latitude, longitude: attendee.longitude)
+        return annotation
     }
 }
 

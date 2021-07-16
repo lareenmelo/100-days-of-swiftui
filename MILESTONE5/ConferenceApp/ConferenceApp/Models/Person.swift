@@ -13,6 +13,11 @@ struct Person: Identifiable, Codable {
     var image: String?
     var twitterHandle: String
     
+    // Day 78
+    var locationRecorded = false
+    var latitude: Double = 0
+    var longitude: Double = 0
+    
     private func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
@@ -50,5 +55,11 @@ struct Person: Identifiable, Codable {
         }
 
         return nil
+    }
+}
+
+extension Person: Equatable {
+    static func ==(lhs: Person, rhs: Person) -> Bool {
+        lhs.id == rhs.id
     }
 }
