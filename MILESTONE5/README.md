@@ -1,4 +1,4 @@
-# Milestone Project #4 - FriendFace
+# Milestone Project #5 - ConferenceBook
 
 https://www.hackingwithswift.com/100/swiftui/77
 https://www.hackingwithswift.com/100/swiftui/78
@@ -11,9 +11,10 @@ https://www.hackingwithswift.com/100/swiftui/78
 |Day 77 :white_check_mark: | Day 77 :white_check_mark:  |
 |:--|:--|
 | Completed the core milestone project! | Added MapKit to the project | 
-| ![D77](Data/D77.mp4) |![D77](Data/D77.mp4)|
+| ![D77](https://user-images.githubusercontent.com/12801333/125904495-b6d6a03a-7925-48e2-9f90-a10ccf6a6055.mp4) |![D78](https://user-images.githubusercontent.com/12801333/125904590-6b0926bf-f170-4c6c-945f-0618736b1109.mp4)|
 
 ## Final Project
+
 | Main View | Adding an User | Detail View | Map View |
-|:--|:--||:--|:--|
-|![main](Data/Main.png) |![addUser](Data/Add.png) |![detailView](Data/Detail.png) |![map](Data/Map.png) |
+|:--|:--|:--|:--|
+| ![main](Data/Main.png) |![addUser](Data/Add.png) |![detailView](Data/Detail.png) |![map](Data/Map.png) |
