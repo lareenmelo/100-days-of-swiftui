@@ -8,7 +8,7 @@ https://www.hackingwithswift.com/100/swiftui/79
 EnvironmentObjects, TabView, Tags
 | Day 79 :white_check_mark: | Day 80 :white_check_mark: | Day 81 :white_check_mark: | Day 82 :white_check_mark: | Day 83 :white_check_mark: | Day 84 :white_check_mark: | Day 85 :white_check_mark: |
 |:--|:--|:--|:--|:--|:--|:--|
-|  |  |  |  |  |  |  |
+| worked with Environment Objects and custom values and, learned how to use a TabView |  |  |  |  |  |  |
 | ![D79](Data/D79.png) | ![D80](Data/D80.png) | ![D81](Data/D81.png) | ![D82](Data/D82.png) | ![D83](Data/D83.png) | ![D84](Data/D84.png) | ![D85](Data/D85.png) |
 
 ## Challenges
