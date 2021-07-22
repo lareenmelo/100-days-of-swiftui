@@ -57,12 +57,12 @@ struct ProspectsView: View {
         }
     }
 
-    let simulatedData = ["Paul Hudson\npaul@hackingwithswift.com", "Taylor Swift\ntaylor@hackingwithswift.com", "Taylor Swift\ntaylor@hackingwithswift.com", "Tim Apple\ntim@hackingwithswift.com"]
+    let simulatedData = ["Paul Hudson\npaul@hackingwithswift.com", "Taylor Swift\ntaylor@hackingwithswift.com", "Taylor Swift\ntaylor@hackingwithswift.com", "Tim Apple\ntim@hackingwithswift.com", "Sara Guard\nsara@hackingwithswift.com", "Conditional Smith\nconditional@hackingwithswift.com", "Switch Perez\nswitch@hackingwithswift.com", "Unwrap MacGoo\nunwrap@hackingwithswift.com"]
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(filteredProspects) { prospect in
+                ForEach(sortedProspects) { prospect in // challenge 3
                     VStack(alignment: .leading) {
                         // challenge 1
                         HStack {
