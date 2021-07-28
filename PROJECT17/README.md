@@ -23,3 +23,12 @@ From [Hacking with Swift](https://www.hackingwithswift.com/books/ios-swiftui/fla
 >1. Make something interesting for when the timer runs out. At the very least make some text appear, but you should also try designing a custom haptic using Core Haptics.
 >2. Add a settings screen that has a single option: when you get an answer one wrong that card goes back into the array so the user can try it again.
 >3. If you drag a card to the right but not far enough to remove it, then release, you see it turn red as it slides back to the center. Why does this happen and how can you fix it? (Tip: use a custom modifier for this to avoid cluttering your body property.)
+
+
+
+| MAIN VIEW| INCORRECT ANSWER | DEMO |
+|:--:|:--:|:--:|
+|![P17](https://user-images.githubusercontent.com/12801333/127261518-516cc98d-f42f-4391-add5-275c6497febc.png) | ![P17_wrong](https://user-images.githubusercontent.com/12801333/127261572-f4dd021a-f1d4-42cd-b358-f45babf9f028.png) | ![Demo](https://user-images.githubusercontent.com/12801333/127261604-38795b96-c02a-4e3e-b062-492dd9b7e0ed.mov)
+
+
+
