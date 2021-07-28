@@ -14,8 +14,8 @@ gesture(), simultaneousGesture(), sequenced(before:), CoreHaptics, contentShape,
 
 | Day 89 :white_check_mark: | Day 90 :white_check_mark: | Day 91 :white_check_mark: |
 |:--|:--|:--|
-| worked on the flashcards, added colors so we can tell when we had an answer right or wrong, and added a timer. | fixed some bugs (including the card's fast animation that was happening) and now users can add their own cards to practice with (it uses user defaults as persistence). | |
-| ![D89](Data/D89.mov) | ![D90](https://user-images.githubusercontent.com/12801333/127066363-e33118e1-b3ad-42bb-a52e-8c8cd55e0daf.mov) | ![D91](Data/D91.png) |
+| worked on the flashcards, added colors so we can tell when we had an answer right or wrong, and added a timer. | fixed some bugs (including the card's fast animation that was happening) and now users can add their own cards to practice with (it uses user defaults as persistence). | another set of challenges destroyed (jk those challenge destroyed me). Completed the 3 challenges for the flash cards app! I had to fix a color related bug, add haptics for when the timer finished and a new settings feature! :) |
+| ![D89](Data/D89.mov) | ![D90](https://user-images.githubusercontent.com/12801333/127066363-e33118e1-b3ad-42bb-a52e-8c8cd55e0daf.mov) | ![D91](Data/D91.mov) |
 
 ## Challenges
 
