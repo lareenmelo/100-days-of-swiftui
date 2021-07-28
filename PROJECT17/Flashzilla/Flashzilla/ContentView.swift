@@ -13,22 +13,27 @@ struct ContentView: View {
     @Environment(\.accessibilityEnabled) var accessibilityEnabled
 
     @State private var cards = [Card]()
-    @State private var showingEditScreen = false
-
+    // challenge 2
+    @State private var showingSheet = false
+    
     @State private var timeRemaining = 100
     @State private var isActive = true
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-
+    
     // challenge 1
     @State private var engine: CHHapticEngine?
-
+    
+    // challenge 2
+    @State private var tryWrongCardsAgain = true
+    @State private var sheet: SheetType = .editCards
+    
     var body: some View {
         ZStack {
             Image(decorative: "background")
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
-
+            
             VStack {
                 Text("Time: \(timeRemaining)")
                     .font(.largeTitle)
@@ -40,13 +45,19 @@ struct ContentView: View {
                             .fill(Color.black)
                             .opacity(0.75)
                     )
-
+                
                 ZStack {
                     ForEach(0..<cards.count, id: \.self) { index in
                         CardView(card: self.cards[index]) {
-                           withAnimation {
-                               self.removeCard(at: index)
-                           }
+                            // challenge 2
+                            isCorrect in
+                            if !isCorrect {
+                                self.removeCard(at: index, restack: true)
+                                return
+                            }
+                            withAnimation {
+                                self.removeCard(at: index)
+                            }
                         }
                         .stacked(at: index, in: self.cards.count)
                         .allowsHitTesting(index == self.cards.count - 1)
@@ -54,7 +65,7 @@ struct ContentView: View {
                     }
                 }
                 .allowsHitTesting(timeRemaining > 0)
-
+                
                 if cards.isEmpty {
                     Button("Start Again", action: resetCards)
                         .padding()
@@ -63,13 +74,37 @@ struct ContentView: View {
                         .clipShape(Capsule())
                 }
             }
+            
+            // challenge 2
+            VStack(alignment: .leading) {
+                HStack {
+                    Button(action: {
+                        self.sheet = .settings
+                        self.showingSheet = true
+                    }) {
+                        Image(systemName: "gear")
+                            .padding()
+                            .background(Color.black.opacity(0.7))
+                            .clipShape(Circle())
+                    }
+                    Spacer()
 
+                }
+                Spacer()
+
+            }
+            .foregroundColor(.white)
+            .font(.largeTitle)
+            .padding()
+
+            
             VStack {
                 HStack {
                     Spacer()
-
                     Button(action: {
-                        self.showingEditScreen = true
+                        // challenge 2
+                        self.sheet = .editCards
+                        self.showingSheet = true
                     }) {
                         Image(systemName: "plus.circle")
                             .padding()
@@ -77,19 +112,25 @@ struct ContentView: View {
                             .clipShape(Circle())
                     }
                 }
-
+                
                 Spacer()
             }
             .foregroundColor(.white)
             .font(.largeTitle)
             .padding()
 
+            
             if differentiateWithoutColor || accessibilityEnabled {
                 VStack {
                     Spacer()
-
+                    
                     HStack {
                         Button(action: {
+                            // challenge
+                            if self.tryWrongCardsAgain {
+                                self.restackCard(at: self.cards.count - 1)
+                                return
+                            }
                             withAnimation {
                                 self.removeCard(at: self.cards.count - 1)
                             }
@@ -102,7 +143,7 @@ struct ContentView: View {
                         .accessibility(label: Text("Wrong"))
                         .accessibility(hint: Text("Mark your answer as being incorrect."))
                         Spacer()
-
+                        
                         Button(action: {
                             withAnimation {
                                 self.removeCard(at: self.cards.count - 1)
@@ -138,29 +179,48 @@ struct ContentView: View {
                 self.gameEnded() // challenge 1
             }
         }
-        .sheet(isPresented: $showingEditScreen, onDismiss: resetCards) {
-            EditCards()
+        // challenge 2
+        .sheet(isPresented: $showingSheet, onDismiss: resetCards) {
+            if self.sheet == .editCards {
+                EditCards()
+            } else if self.sheet == .settings {
+                SettingsView(tryWrongCardsAgain: self.$tryWrongCardsAgain)
+            }
         }
         .onAppear(perform: resetCards)
         .onAppear(perform: prepareHaptics) // challenge 1
     }
-
-    func removeCard(at index: Int) {
-        guard index >= 0 else { return }
-
-        cards.remove(at: index)
-
-        if cards.isEmpty {
-            isActive = false
+    
+    // challenge 2
+    func removeCard(at index: Int, restack: Bool = false) {
+        if !restack {
+            guard index >= 0 else { return }
+            
+            cards.remove(at: index)
+            
+            if cards.isEmpty {
+                isActive = false
+            }
+        } else {
+            self.restackCard(at: index)
         }
     }
-
+    
+    // chhallenge 2
+    func restackCard(at index: Int) {
+        guard index >= 0 else { return }
+        
+        let card = cards[index]
+        cards.remove(at: index)
+        cards.insert(card, at: 0)
+    }
+    
     func resetCards() {
         timeRemaining = 100
         isActive = true
         loadData()
     }
-
+    
     func loadData() {
         if let data = UserDefaults.standard.data(forKey: "Cards") {
             if let decoded = try? JSONDecoder().decode([Card].self, from: data) {
@@ -172,7 +232,7 @@ struct ContentView: View {
     // challenge 1
     func prepareHaptics() {
         guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
-
+        
         do {
             self.engine = try CHHapticEngine()
             try engine?.start()
@@ -184,14 +244,14 @@ struct ContentView: View {
     func gameEnded() {
         guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
         var events = [CHHapticEvent]()
-
+        
         for i in stride(from: 0, to: 1, by: 0.1) {
             let intensity = CHHapticEventParameter(parameterID: .hapticIntensity, value: Float(i))
             let sharpness = CHHapticEventParameter(parameterID: .hapticSharpness, value: Float(i))
             let event = CHHapticEvent(eventType: .hapticTransient, parameters: [intensity, sharpness], relativeTime: i)
             events.append(event)
         }
-
+        
         do {
             let pattern = try CHHapticPattern(events: events, parameters: [])
             let player = try engine?.makePlayer(with: pattern)
@@ -213,4 +273,9 @@ extension View {
         let offset = CGFloat(total - position)
         return self.offset(CGSize(width: 0, height: offset * 10))
     }
+}
+
+// challenge 2
+enum SheetType {
+    case editCards, settings
 }

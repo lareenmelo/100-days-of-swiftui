@@ -13,11 +13,18 @@ struct CardView: View {
 
     let card: Card
 
-    var removal: (() -> Void)? = nil
+    var removal: ((_ isCorrect: Bool) -> Void)?
 
     @State private var feedback = UINotificationFeedbackGenerator()
     @State private var isShowingAnswer = false
     @State private var offset = CGSize.zero
+    
+    // challenge 2
+    let tryWrongCardsAgain: Bool = true
+    private var shouldResetPosition: Bool {
+        offset.width < 0 && tryWrongCardsAgain
+    }
+
 
     var body: some View {
         ZStack {
@@ -33,7 +40,8 @@ struct CardView: View {
                     differentiateWithoutColor
                         ? nil
                         : RoundedRectangle(cornerRadius: 25, style: .continuous)
-                            .fill(offset.width > 0 ? Color.green : Color.red)
+                        .fill(backgroundColor(offset: offset)) // challenge 3
+
                 )
                 .shadow(radius: 10)
 
@@ -77,7 +85,14 @@ struct CardView: View {
                             self.feedback.notificationOccurred(.error)
                         }
 
-                        self.removal?()
+                        // challenge 2
+                        self.removal?(self.offset.width > 0)
+                        
+                        if self.shouldResetPosition {
+                            self.isShowingAnswer = false
+                            self.offset = .zero
+                        }
+                        
                     } else {
                         self.offset = .zero
                     }
@@ -87,6 +102,19 @@ struct CardView: View {
             self.isShowingAnswer.toggle()
         }
         .animation(.spring())
+    }
+    
+    // challenge 3
+    func backgroundColor(offset: CGSize) -> Color {
+        if offset.width > 0 {
+            return .green
+        }
+
+        if offset.width < 0 {
+            return .red
+        }
+
+        return .white
     }
 }
 

@@ -14,6 +14,7 @@
 		FE00E40E26ABC3040005167B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE00E40D26ABC3040005167B /* Preview Assets.xcassets */; };
 		FE00E41126ABC3040005167B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE00E40F26ABC3040005167B /* LaunchScreen.storyboard */; };
 		FE7BAB6E26AF65D4006134EE /* EditCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7BAB6D26AF65D4006134EE /* EditCards.swift */; };
+		FE9910D426B0F08100BEB785 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9910D326B0F08100BEB785 /* SettingsView.swift */; };
 		FEA7DA7A26AC8055006C26DD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA7DA7926AC8055006C26DD /* Card.swift */; };
 		FEA7DA7C26AC8102006C26DD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA7DA7B26AC8102006C26DD /* CardView.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		FE00E41026ABC3040005167B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE00E41226ABC3040005167B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE7BAB6D26AF65D4006134EE /* EditCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCards.swift; sourceTree = "<group>"; };
+		FE9910D326B0F08100BEB785 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		FEA7DA7926AC8055006C26DD /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		FEA7DA7B26AC8102006C26DD /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +74,7 @@
 				FE00E41226ABC3040005167B /* Info.plist */,
 				FE00E40C26ABC3040005167B /* Preview Content */,
 				FEA7DA7B26AC8102006C26DD /* CardView.swift */,
+				FE9910D326B0F08100BEB785 /* SettingsView.swift */,
 			);
 			path = Flashzilla;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE9910D426B0F08100BEB785 /* SettingsView.swift in Sources */,
 				FE00E40526ABC3030005167B /* AppDelegate.swift in Sources */,
 				FE00E40726ABC3030005167B /* SceneDelegate.swift in Sources */,
 				FE00E40926ABC3030005167B /* ContentView.swift in Sources */,
