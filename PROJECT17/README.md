@@ -15,11 +15,11 @@ gesture(), simultaneousGesture(), sequenced(before:), CoreHaptics, contentShape,
 | Day 89 :white_check_mark: | Day 90 :white_check_mark: | Day 91 :white_check_mark: |
 |:--|:--|:--|
 | worked on the flashcards, added colors so we can tell when we had an answer right or wrong, and added a timer. | fixed some bugs (including the card's fast animation that was happening) and now users can add their own cards to practice with (it uses user defaults as persistence). | another set of challenges destroyed (jk those challenge destroyed me). Completed the 3 challenges for the flash cards app! I had to fix a color related bug, add haptics for when the timer finished and a new settings feature! :) |
-| ![D89](Data/D89.mov) | ![D90](https://user-images.githubusercontent.com/12801333/127066363-e33118e1-b3ad-42bb-a52e-8c8cd55e0daf.mov) | ![D91](Data/D91.mov) |
+| ![D89](Data/D89.mov) | ![D90](https://user-images.githubusercontent.com/12801333/127066363-e33118e1-b3ad-42bb-a52e-8c8cd55e0daf.mov) | ![D91](https://user-images.githubusercontent.com/12801333/127260635-315f0f92-e396-4960-b45e-3eed6ed46159.mov) |
 
 ## Challenges
 
-From [Hacking with Swift]():
->1. 
->2. 
->3. 
+From [Hacking with Swift](https://www.hackingwithswift.com/books/ios-swiftui/flashzilla-wrap-up):
+>1. Make something interesting for when the timer runs out. At the very least make some text appear, but you should also try designing a custom haptic using Core Haptics.
+>2. Add a settings screen that has a single option: when you get an answer one wrong that card goes back into the array so the user can try it again.
+>3. If you drag a card to the right but not far enough to remove it, then release, you see it turn red as it slides back to the center. Why does this happen and how can you fix it? (Tip: use a custom modifier for this to avoid cluttering your body property.)
