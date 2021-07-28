@@ -20,6 +20,9 @@ struct SettingsView: View {
                     Toggle(isOn: $tryWrongCardsAgain) {
                         Text("Try wrong cards again")
                     }
+                    .onChange(of: tryWrongCardsAgain, perform: { value in
+                        UserDefaults.standard.setValue(value, forKey: "tryAgain")
+                    })
                 }
             }
             .navigationBarTitle("Settings")

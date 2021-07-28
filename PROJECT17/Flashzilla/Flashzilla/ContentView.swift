@@ -24,7 +24,7 @@ struct ContentView: View {
     @State private var engine: CHHapticEngine?
     
     // challenge 2
-    @State private var tryWrongCardsAgain = true
+    @State private var tryWrongCardsAgain = UserDefaults.standard.bool(forKey: "tryAgain")
     @State private var sheet: SheetType = .editCards
     
     var body: some View {
@@ -52,12 +52,15 @@ struct ContentView: View {
                             // challenge 2
                             isCorrect in
                             if !isCorrect {
+                                if self.tryWrongCardsAgain {
                                 self.removeCard(at: index, restack: true)
-                                return
+                                    return
+                                }
                             }
-                            withAnimation {
-                                self.removeCard(at: index)
-                            }
+                                withAnimation {
+                                    self.removeCard(at: index)
+                                }
+                            
                         }
                         .stacked(at: index, in: self.cards.count)
                         .allowsHitTesting(index == self.cards.count - 1)

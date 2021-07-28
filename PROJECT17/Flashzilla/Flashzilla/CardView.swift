@@ -20,7 +20,7 @@ struct CardView: View {
     @State private var offset = CGSize.zero
     
     // challenge 2
-    let tryWrongCardsAgain: Bool = true
+    let tryWrongCardsAgain: Bool = UserDefaults.standard.bool(forKey: "tryAgain")
     private var shouldResetPosition: Bool {
         offset.width < 0 && tryWrongCardsAgain
     }
