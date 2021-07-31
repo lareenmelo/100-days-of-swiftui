@@ -10,7 +10,7 @@ Alignment, Offset, lastTextBaseline, alignmentGuide, ViewDimensions, position(),
 | Day 92 :white_check_mark: | Day 93 :white_check_mark: | Day 94 :white_check_mark: |
 |:--|:--|:--|
 | learned how layout works in SwiftUI, what alignment guides are and, how to create your own custom alignment guide.  | learned about absolute and relative positions in SwiftUI, explored different ways of using GeometryReader, created custom coordinate spaces using coordinateSpace() and, learned how to create ScrollView effects using GeometryReader |  |
-| 📐 | ![93](Data/D93.mp4) | ![D94](Data/D94.png) | 
+| 📐 | ![93](https://user-images.githubusercontent.com/12801333/127727333-2f7e1866-64a4-4681-bc15-f85983d223c1.mp4) | ![D94](Data/D94.png) | 
 
 
 ## Challenges
