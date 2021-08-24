@@ -38,9 +38,10 @@
 * [Day 79 - Day 85](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/PROJECT16)
 * [Day 86 - Day 91](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/PROJECT17)
 * [Day 92 - Day 94](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/PROJECT18)
+* [Day 95](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/MILESTONE6)
 
 | Type | Status |
 |:--|--|
 | Projects | 18/19 |
-| Milestone Projects | 5/6 |
+| Milestone Projects | 6/6 |
 | Challenge Days | 1/1 |
