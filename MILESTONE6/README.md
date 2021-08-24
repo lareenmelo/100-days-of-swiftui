@@ -9,7 +9,7 @@ https://www.hackingwithswift.com/100/swiftui/95
 
 |Day 95 :white_check_mark: | Media |
 |:--|:--|
-| Completed the core milestone project! | ![D95](Data/D95.mp4) |  
+| Completed the core milestone project! | ![D95](https://user-images.githubusercontent.com/12801333/130562912-c3c6855e-efe6-49d3-95a4-466704d1314a.mp4) |  
 
 ## Final Project
 
