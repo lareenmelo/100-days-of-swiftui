@@ -9,7 +9,7 @@ https://www.hackingwithswift.com/100/swiftui/96
 | Day 96 :white_check_mark: | Day 97 :white_check_mark: | Day 98 :white_check_mark: | Day 99 :white_check_mark: | 
 |:--|:--|:--|:--|
 | learned about UISplitViewController and how to recreate it in SwiftUI using NavigationView, how to display a sheet && alert using an optional Identifiable object, and also learned more about Group's behavior. | 97 | 98 | 99 |
-| ![96](/Data/D96.png) |  |  |  | 
+| ![96](Data/D96.png) |  |  |  | 
 
 
 ## Challenges
