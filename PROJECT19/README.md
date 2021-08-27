@@ -15,7 +15,7 @@ StackNavigationViewStyle, UIDevice, .phoneOnlyStackNavigationView(), Layout Neut
 | Day 98 :white_check_mark: | Day 99 :white_check_mark: | 
 |:--|:--|
 | learned about building views with a neutral layout, fixed some layout issues with the project. | 99 |
-|![98](Data/D98.mov) |  | 
+|![98](https://user-images.githubusercontent.com/12801333/131056175-43547fc1-eae6-482b-946b-4fd52a225cc4.mov) |  | 
 
 ## Challenges
 
