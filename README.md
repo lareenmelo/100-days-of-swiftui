@@ -40,6 +40,7 @@
 * [Day 92 - Day 94](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/PROJECT18)
 * [Day 95](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/MILESTONE6)
 * [Day 96 - Day 99](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/PROJECT19)
+* [Day 100](https://github.com/lareenmelo/100-days-of-swiftui/tree/main/D100)
 
 | Type | Status |
 |:--|--|
